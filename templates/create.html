@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block title %} Create Asset {% endblock %}
+{% block content %} 
+
+<div>
+    <h1>New Asset</h1>
+    <div class="row">
+        <input id="id" class="one-half column" type="text" placeholder="ID..." />
+    </div>
+    <div class="row">
+        <input id="name" class="one-half column" type="text" placeholder="Name..." />
+    </div>
+    <div class="row">
+        <input id="birth_date" class="one-half column" type="text" placeholder="Born/Manufactured Date (31/01/2018)..." />
+    </div>
+    <div class="row">
+        <input id="picture_link" class="one-half column" type="text" placeholder="Picture Link..." />
+    </div>
+    <div class="row">
+        <input id="description" class="one-half column" type="text" placeholder="Description..." />
+    </div>
+    <div class="row">
+        <button id="submit" class="one-half column">Create</button>
+    </div>
+</div>
+
+<script src={{ url_for("static", filename="js/create.js") }} ></script>
+
+{% endblock %}

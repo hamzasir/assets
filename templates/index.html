@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %} List of Assets {% endblock %}
+{% block content %} 
+
+<div>
+    <h1>List of Assets</h1>
+    <div id="list" class="items"></div>
+</div>
+
+<script src={{ url_for("static", filename="js/index.js") }} ></script>
+
+{% endblock %}

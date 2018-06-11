@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block title %} Transfer an Asset {% endblock %}
+{% block content %} 
+
+<div class="row">
+    <div class="two-thirds column">
+        <h1>Your Assets</h1>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Born/Manufactured Date</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+        </table>
+    </div>
+    <div class="one-third column">
+        <h1>Transfer</h1>
+        <div class="row">
+            <input id="id" class="u-full-width" type="text" placeholder="ID..." />
+        </div>
+        <div class="row">
+            <input id="to_address" class="u-full-width" type="text" placeholder="Address to transfer to..."/>
+        </div>
+        <div class="row">
+            <button id="submit" class="u-full-width">Transfer</button>
+        </div>
+    </div>
+</div>
+
+<script src={{ url_for("static", filename="js/transfer.js") }} ></script>
+
+{% endblock %}
